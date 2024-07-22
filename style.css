@@ -1,0 +1,1568 @@
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+/* reset */
+html,
+html {
+scroll-behavior: smooth;
+}
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+nav ul,
+nav li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* start editing from here */
+
+a {
+    text-decoration: none;
+}
+
+.txt-rt {
+    text-align: right;
+}
+
+
+/* text align right */
+
+.txt-lt {
+    text-align: left;
+}
+
+
+/* text align left */
+
+.txt-center {
+    text-align: center;
+}
+
+
+/* text align center */
+
+.float-rt {
+    float: right;
+}
+
+
+/* float right */
+
+.float-lt {
+    float: left;
+}
+
+
+/* float left */
+
+.clear {
+    clear: both;
+}
+
+
+/* clear float */
+
+.pos-relative {
+    position: relative;
+}
+
+
+/* Position Relative */
+
+.pos-absolute {
+    position: absolute;
+}
+
+
+/* Position Absolute */
+
+.vertical-base {
+    vertical-align: baseline;
+}
+
+
+/* vertical align baseline */
+
+.vertical-top {
+    vertical-align: top;
+}
+
+
+/* vertical align top */
+
+nav.vertical ul li {
+    display: block;
+}
+
+
+/* vertical menu */
+
+nav.horizontal ul li {
+    display: inline-block;
+}
+
+
+/* horizontal menu */
+
+img {
+    max-width: 100%;
+}
+
+
+/*end reset*/
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+  font-family: 'Barlow', sans-serif;
+}
+
+body a {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    text-decoration: none;
+}
+
+body a:hover {
+    text-decoration: none;
+}
+
+body a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+select,
+input[type="email"],
+input[type="text"],
+input[type=password],
+input[type="button"],
+input[type="submit"],
+textarea {
+  font-family: 'Barlow', sans-serif;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+  font-family: 'Barlow', sans-serif;
+    letter-spacing: 1px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+  font-family: 'Barlow', sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*-- //Reset-Code --*/
+
+body {background:url(/b1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 100vh;
+}
+h1.header-w3ls {
+    padding: 31px 0px 25px;
+	font-size:53px;
+    text-align: center;
+    text-transform:capitalize;
+    color:#ffffff;
+    text-shadow: 2px 3px rgba(0, 0, 0, 0.42);
+    letter-spacing: 5px;
+}
+.main-bothside {
+    width: 64%;
+    padding: 2em 2em 2em;
+    margin: 0em auto;
+    -webkit-box-shadow: -2px 7px 37px 8px rgba(0,0,0,0.52);
+    -moz-box-shadow: -2px 7px 37px 8px rgba(0,0,0,0.52);
+    box-shadow: -2px 7px 37px 8px rgba(0,0,0,0.52);
+    background: rgba(0, 0, 0, 0.44);
+    border: #000 6px double;
+}
+.form-group,.parent-clss{
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.personal-info {
+    flex-basis: 32%;
+    -webkit-flex-basis: 32%;
+    box-sizing: border-box;
+}
+.form-mid-w3ls {
+    flex-basis: 31.4%;
+    -webkit-flex-basis: 31.4%;
+}
+.form-check:nth-child(2),.form-check:nth-child(3) {
+    margin-right: 9px;
+}
+.form-check {
+    display: inline-block;
+}
+
+.personal-info p,label.form-check-label{
+    font-size: 15px;
+    padding: 6px 0px;
+    color: #fff;
+}
+.parent-clss {
+    padding-bottom:15px;
+}
+.form-left-w3ls input[type="text"],.form-right-w3ls input[type="text"],.form-mid-w3ls input[type="email"],
+ .form-mid-w3ls input[type="text"],.form-control-w3l textarea,.form-left-choose input[type="file"]{
+    outline: none;
+    width: 100%;
+    color: #fff;
+    font-size: 15px;
+    padding: .7em 1em .8em 0em;
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin: 0px 0px 16px;
+    display: inline-block;
+    background: none;
+    letter-spacing: 2px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    box-sizing: border-box;
+}
+.form-control-w3l textarea {
+    height:9em;
+    overflow: hidden;
+    resize: none;
+}
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+}
+button[type="submit"] {
+    text-transform: uppercase;
+    background: #fff;
+    color: #000000;
+    padding: .7em 0em;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 1em;
+    cursor: pointer;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+button[type="submit"]:hover {
+    color: #fff;
+    background: #000;
+}
+.form-left-choose input[type="file"]{
+    border:none;
+	padding:0px;
+}
+.copy {
+    padding: 39px 0px;
+}
+.copy p {
+    margin: 0em;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    letter-spacing: 2px;
+}
+.copy p a {
+    color:#000;
+    text-decoration: none;
+}
+.copy p a:hover {	color: #fff;}
+
+/*--responsive--*/
+@media(max-width:1920px){
+h1.header-w3ls {
+    font-size:60px;
+}	
+}
+@media(max-width:1680px){
+h1.header-w3ls {
+    font-size: 57px;
+	
+}
+}
+@media(max-width:1600px){
+	h1.header-w3ls {
+    font-size: 53px;
+	}
+}
+@media(max-width:1440px){
+.main-bothside {
+    width: 67%;
+}
+.form-left-w3ls input[type="text"], .form-right-w3ls input[type="text"], .form-mid-w3ls input[type="email"], .form-mid-w3ls input[type="text"], 
+.form-control-w3l textarea, .form-left-choose input[type="file"] {
+    margin: 0px 0px 13px;	
+}
+.copy {
+    padding: 34px 0px;
+}
+}
+@media(max-width:1366px){
+h1.header-w3ls {
+    font-size: 49px;
+    padding: 28px 0px 23px;
+}
+}
+@media(max-width:1280px){
+.form-left-w3ls input[type="text"], .form-right-w3ls input[type="text"], .form-mid-w3ls input[type="email"], .form-mid-w3ls input[type="text"], .form-control-w3l textarea, 
+.form-left-choose input[type="file"] {
+    padding: .7em .8em .7em 0em;
+}
+.main-bothside {
+    width: 72%;	
+	
+}
+}
+@media(max-width:1080px){
+.main-bothside {
+    width: 82%;
+	   padding: 1.7em 1.7em 1.7em;	
+}
+.form-control-w3l textarea {
+    height: 8em;
+} 
+}
+@media(max-width:1050px){
+.main-bothside {
+    width: 84%;
+    padding: 1.5em 1.4em 1.5em;
+}	
+}
+@media(max-width:1024px){
+h1.header-w3ls {
+	    font-size: 46px;
+    letter-spacing: 3px;
+}	
+.form-check {
+    display: block;
+	margin-top: 11px;
+}
+.form-check:nth-child(2), .form-check:nth-child(3) {
+    margin-right: 0px;    
+}
+button[type="submit"] {
+    font-size: .9em;
+}
+}
+@media(max-width:991px){
+.form-left-w3ls input[type="text"], .form-right-w3ls input[type="text"], .form-mid-w3ls input[type="email"], .form-mid-w3ls input[type="text"], .form-control-w3l textarea, .form-left-choose input[type="file"] {
+    margin: 0px 0px 10px;
+	    font-size: 14px;
+    letter-spacing: 1px;
+}
+button[type="submit"] {
+    margin-top: .8em;
+}
+
+}
+@media(max-width:900px){
+	h1.header-w3ls {
+    font-size: 43px;
+    letter-spacing: 2px;
+}
+.copy p {
+    font-size: 16px;
+}
+.copy {
+    padding: 30px 0px;
+}
+}
+@media(max-width:800px){
+	.form-control-w3l textarea {
+    height: 7em;
+}
+.copy p {
+    font-size: 15px;
+}
+}
+@media(max-width:768px){
+.main-bothside {
+    width: 87%;
+}
+button[type="submit"] {
+    margin-top: .7em;
+}	
+}
+@media(max-width:767px){
+	.parent-clss {
+    padding-bottom: 13px;
+}
+}
+@media(max-width:736px){
+button[type="submit"] {
+    padding: .6em 0em;
+}
+h1.header-w3ls {
+    padding: 23px 0px 23px;
+}	
+}
+@media(max-width:667px){
+h1.header-w3ls {
+    font-size: 41px;
+    letter-spacing: 1px;
+}	
+}
+@media(max-width:640px){
+.form-control-w3l textarea {
+    height: 6em;
+}
+.copy p {
+    font-size: 14px;
+}	
+}
+@media(max-width:600px){
+	h1.header-w3ls {
+    font-size: 39px;
+	}
+	.copy {
+    padding: 27px 0px;
+}
+}
+@media(max-width:568px){
+.form-group {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}	
+.copy p {
+    letter-spacing: 1px;
+}
+}
+@media(max-width:480px){
+.main-bothside {
+    width: 79%;
+}
+.copy p {
+    padding: 0px 10px;
+    line-height: 28px;
+}	
+}
+@media(max-width:440px){
+.parent-clss {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+.personal-info:nth-child(2) {
+    margin: 17px 0px;
+}
+}
+@media(max-width:414px){
+.copy {
+    padding: 23px 0px;
+}
+h1.header-w3ls {
+    font-size: 37px;
+}	
+}
+@media(max-width:384px){
+.main-bothside {
+    padding: 1em 1.4em 1em;
+}	
+}
+@media(max-width:375px){
+.form-check {
+    margin-top: 8px;
+}
+.form-left-w3ls input[type="text"], .form-right-w3ls input[type="text"], .form-mid-w3ls input[type="email"], .form-mid-w3ls input[type="text"], .form-control-w3l textarea, .form-left-choose input[type="file"] {
+    margin: 0px 0px 8px;
+}	
+}
+@media(max-width:320px){
+.main-bothside {
+    width: 73%;
+}
+.personal-info:nth-child(2) {
+    margin: 10px 0px;
+}
+
+/* Estilo para o cabeçalho */
+.header-w3ls {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Estilo para o contêiner principal */
+.main-bothside {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Estilo para o grupo de botões */
+.form-group {
+    text-align: center;
+}
+
+/* Estilo para o botão DROPDOWN */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para o conteúdo do DROPDOWN */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* Estilo para os botões UPDATE e DELETE */
+button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* Estilo para o formulário de atualização */
+#update-form {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Estilo para o formulário de exclusão */
+#delete-form {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Estilo para o rodapé */
+.copy {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Estilo para o cabeçalho */
+.header-w3ls {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os botões */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Estilo para os botões dentro da dropdown */
+.dropdown button {
+    background-color: #333;
+}
+
+/* Estilo para o formulário de UPDATE e DELETE */
+#update-form,
+#delete-form {
+    margin-top: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para a seção de rodapé */
+.copy {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.copy a {
+    color: #007bff;
+}
+
+/* Reset styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, dl, dt, dd, ol, nav ul, nav li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    background: #fff;
+    font-family: 'Barlow', sans-serif;
+    background: url('/b1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.5s all;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1.header-w3ls {
+    padding: 31px 0px 25px;
+    font-size: 53px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-shadow: 2px 3px rgba(0, 0, 0, 0.42);
+    letter-spacing: 5px;
+}
+
+.main-bothside {
+    width: 64%;
+    padding: 2em;
+    margin: 0 auto;
+    box-shadow: -2px 7px 37px 8px rgba(0, 0, 0, 0.52);
+    background: rgba(0, 0, 0, 0.44);
+    border: #000 6px double;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+}
+
+button, .dropbtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 4px 2px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover, .dropbtn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#update-form, #delete-form {
+    display: none;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    margin-top: 10px;
+    color: #fff;
+}
+
+input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: none;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: none;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+button[type="submit"] {
+    background-color: #fff;
+    color: #000;
+    padding: .7em 0;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+button[type="submit"]:hover {
+    color: #fff;
+    background: #000;
+}
+
+.copy {
+    padding: 39px 0;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.copy a {
+    color: #000;
+}
+
+.copy a:hover {
+    color: #fff;
+}
+
+/* Responsive styles */
+@media(max-width: 1440px) {
+    .main-bothside {
+        width: 67%;
+    }
+}
+
+@media(max-width: 1280px) {
+    .main-bothside {
+        width: 72%;
+    }
+}
+
+@media(max-width: 1080px) {
+    .main-bothside {
+        width: 82%;
+        padding: 1.7em;
+    }
+}
+
+@media(max-width: 768px) {
+    .main-bothside {
+        width: 87%;
+    }
+}
+
+@media(max-width: 480px) {
+    .main-bothside {
+        width: 79%;
+    }
+}
+
+@media(max-width: 320px) {
+    .main-bothside {
+        width: 73%;
+    }
+}
+
+}
+/*--//responsive--*/
+
+/* Reset styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o body */
+body {
+    background: url(/b1.jpg) no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para o contêiner CRUD */
+.crud-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto com opacidade */
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Estilos para o cabeçalho */
+.crud-container .header-w3ls {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 3.5em;
+    text-transform: capitalize;
+}
+
+/* Estilos para a seção principal */
+.crud-container .main-bothside {
+    width: 60%;
+    margin: 20px auto;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.crud-container .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.crud-container button, .crud-container .dropbtn {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.crud-container button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.crud-container .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.crud-container .dropbtn {
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 5px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.crud-container .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.crud-container .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.crud-container .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.crud-container .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.crud-container #update-form, .crud-container #delete-form {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crud-container .modal-content {
+    background-color: #333;
+    padding: 20px;
+    border: 1px solid white;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    color: white;
+}
+
+.crud-container .close {
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.crud-container .close:hover, .crud-container .close:focus {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos para o formulário */
+.crud-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crud-container form label {
+    margin-bottom: 10px;
+    color: #fff;
+    width: 100%;
+    text-align: left;
+}
+
+.crud-container form input[type="text"], .crud-container form input[type="date"], .crud-container form select, .crud-container form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+}
+
+.crud-container form button[type="submit"] {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.crud-container form button[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.crud-container .copy {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.crud-container .copy a {
+    color: white;
+    transition: color 0.3s;
+}
+
+.crud-container .copy a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos para o botão LA ELE */
+.la-ele-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.la-ele-btn {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    opacity: 0.03;
+}
+
+.la-ele-btn:hover {
+    opacity: 1;
+    color: red;
+}
+
+#la-ele-prompt,
+#la-ele-confirm {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 300px;
+    text-align: center;
+}
+
+#la-ele-prompt h2,
+#la-ele-confirm h2 {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#la-ele-password {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+}
+
+#la-ele-prompt button,
+#la-ele-confirm button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .crud-container .main-bothside {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .crud-container .main-bothside {
+        width: 80%;
+    }
+
+    .crud-container .form-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .crud-container .dropdown-content a {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .crud-container .main-bothside {
+        width: 90%;
+    }
+
+    .crud-container .header-w3ls {
+        font-size: 3em;
+    }
+}
+/* Reset styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o body */
+body {
+    background: url(/b1.jpg) no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: black;
+}
+
+/* Estilos para o contêiner de visualização de dados */
+.data-visualization-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade */
+    color: black;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Estilos para o cabeçalho */
+.data-visualization-container .header-w3ls {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: black;
+}
+
+/* Estilos para a seção principal */
+.data-visualization-container .main-bothside {
+    width: 80%;
+    margin: 20px auto;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Estilos para a tabela */
+.data-visualization-container #data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+}
+
+.data-visualization-container #data-table th, .data-visualization-container #data-table td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.data-visualization-container #data-table th {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.data-visualization-container #data-table td {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos para o botão "Ver Mais" */
+.ver-mais-btn {
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.ver-mais-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Estilos para o pop-up */
+#popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.popup-content {
+    background-color: #333;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+    word-wrap: break-word; /* Garante que o texto longo seja quebrado */
+}
+
+/* Título do pop-up */
+.popup-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Botão de fechar do pop-up */
+.close-btn {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #aaa;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para o rodapé */
+.data-visualization-container .copy {
+    padding: 20px;
+    text-align: center;
+    color: black;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.data-visualization-container .copy a {
+    color: black;
+    transition: color 0.3s;
+}
+
+.data-visualization-container .copy a:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .data-visualization-container .main-bothside {
+        width: 90%;
+    }
+
+    .data-visualization-container .header-w3ls {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .data-visualization-container .main-bothside {
+        width: 95%;
+    }
+
+    .data-visualization-container .header-w3ls {
+        font-size: 1.5em;
+    }
+}

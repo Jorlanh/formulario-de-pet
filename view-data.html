@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Visualização de Dados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Barlow:300,400,500" rel="stylesheet">
+</head>
+<body>
+    <div class="data-visualization-container">
+        <h1 class="header-w3ls" id="header-title">Dados</h1>
+        <div class="main-bothside">
+            <table id="data-table">
+                <thead id="table-header"></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Pop-up para exibir a descrição -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="popup-title">Descrição do pet</h2>
+            <p id="description"></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const params = new URLSearchParams(window.location.search);
+            const type = params.get('type');
+            const headerTitle = document.getElementById('header-title');
+            const tableHeader = document.getElementById('table-header');
+            const dataTable = document.getElementById('data-table').getElementsByTagName('tbody')[0];
+            
+            // Esconda o pop-up inicialmente
+            document.getElementById('popup').style.display = 'none';
+
+            let url = '';
+            if (type === 'clients') {
+                headerTitle.innerText = 'Clientes';
+                tableHeader.innerHTML = `
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Endereço</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                    </tr>
+                `;
+                url = '/api/clients/data';
+            } else if (type === 'pets') {
+                headerTitle.innerText = 'Pets';
+                tableHeader.innerHTML = `
+                    <tr>
+                        <th>ID</th>
+                        <th>Cor</th>
+                        <th>Gênero</th>
+                        <th>Animal</th>
+                        <th>Identificação</th>
+                        <th>Nascimento</th>
+                        <th>Raça</th>
+                        <th>ID do Cliente</th>
+                        <th>Ver Mais</th>
+                    </tr>
+                `;
+                url = '/api/pets/data';
+            }
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Erro ao obter dados');
+                }
+                const data = await response.json();
+                for (const item of data) {
+                    const row = dataTable.insertRow();
+                    if (type === 'clients') {
+                        row.insertCell(0).innerText = item.c_id;
+                        row.insertCell(1).innerText = item.nome;
+                        row.insertCell(2).innerText = item.email;
+                        row.insertCell(3).innerText = item.telefone;
+                        row.insertCell(4).innerText = item.adress;
+                        const cityResponse = await fetch(`/api/cities/${item.city_id}`);
+                        const cityData = await cityResponse.json();
+                        row.insertCell(5).innerText = cityData.cidade;
+                        row.insertCell(6).innerText = cityData.estado;
+                    } else if (type === 'pets') {
+                        row.insertCell(0).innerText = item.p_id;
+                        row.insertCell(1).innerText = item.cor;
+                        row.insertCell(2).innerText = item.genero;
+                        row.insertCell(3).innerText = item.animal;
+                        row.insertCell(4).innerText = item.identification;
+                        row.insertCell(5).innerText = new Date(item.nascimento).toLocaleDateString();
+                        row.insertCell(6).innerText = item.breed;
+                        row.insertCell(7).innerText = item.c_id;
+                        const verMaisCell = row.insertCell(8);
+                        const verMaisButton = document.createElement('button');
+                        verMaisButton.innerText = 'Ver Mais';
+                        verMaisButton.classList.add('ver-mais-btn');
+                        verMaisButton.addEventListener('click', () => {
+                            document.getElementById('description').innerText = item.descricao;
+                            document.getElementById('popup').style.display = 'flex';
+                        });
+                        verMaisCell.appendChild(verMaisButton);
+                    }
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+            }
+
+            document.querySelector('.close-btn').addEventListener('click', () => {
+                document.getElementById('popup').style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target == document.getElementById('popup')) {
+                    document.getElementById('popup').style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

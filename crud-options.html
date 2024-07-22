@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Opções CRUD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all"> <!-- Caminho absoluto para o CSS -->
+    <link href="//fonts.googleapis.com/css?family=Barlow:300,400,500" rel="stylesheet">
+</head>
+<body>
+    <div class="crud-container">
+        <h1 class="header-w3ls">Bem-Vindo Usuario!</h1>
+        <div class="main-bothside">
+            <div class="form-group">
+                <div class="dropdown">
+                    <span class="dropbtn">READ</span>
+                    <div class="dropdown-content">
+                        <a href="/api/pets/view-data?type=clients">Ver Todos os Clientes</a>
+                        <a href="/api/pets/view-data?type=pets">Ver Todos os Pets</a>
+                    </div>
+                </div>
+                <button onclick="redirectToHome()">CREATE</button>
+                <button onclick="showUpdateForm()">UPDATE</button>
+                <button onclick="showDeleteForm()">DELETE</button>
+            </div>
+        </div>
+        
+        <!-- Formulário para UPDATE -->
+        <div id="update-form" style="display:none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeForm('update-form')">&times;</span>
+                <h2>Atualizar Pet</h2>
+                <form id="updatePetForm">
+                    <label for="update-id">ID do Pet:</label>
+                    <input type="text" id="update-id" name="id" required>
+                    <button type="button" onclick="fetchPet()">Buscar Pet</button>
+                    <div id="updatePetFields" style="display:none;">
+                        <label for="update-cor">Cor:</label>
+                        <input type="text" id="update-cor" name="cor" required>
+
+                        <label for="update-genero">Gênero:</label>
+                        <select id="update-genero" name="genero" required>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                        </select>
+
+                        <label for="update-animal">Animal:</label>
+                        <select id="update-animal" name="animal" required>
+                            <option value="Gato">Gato</option>
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+
+                        <label for="update-identification">Identificação:</label>
+                        <select id="update-identification" name="identification" required>
+                            <option value="Tattooed">Tattooed</option>
+                            <option value="Microchipped">Microchipped</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+
+                        <label for="update-nascimento">Nascimento:</label>
+                        <input type="date" id="update-nascimento" name="nascimento" required>
+
+                        <label for="update-breed">Raça:</label>
+                        <input type="text" id="update-breed" name="breed" required>
+
+                        <label for="update-c_id">ID do Cliente:</label>
+                        <input type="text" id="update-c_id" name="c_id" required>
+
+                        <!-- Novo campo para Descrição -->
+                        <label for="update-descricao">Descrição:</label>
+                        <textarea id="update-descricao" name="descricao" required></textarea>
+
+                        <button type="submit">Atualizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Formulário para DELETE -->
+        <div id="delete-form" style="display:none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeForm('delete-form')">&times;</span>
+                <h2>Deletar Pet</h2>
+                <form id="deletePetForm">
+                    <label for="delete-id">ID do Pet:</label>
+                    <input type="text" id="delete-id" name="id" required>
+                    <button type="submit">Deletar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p>©2024 CRUD PAGE PETS. Todos os direitos reservados | Design por Caio E Jorlan</a></p>
+        </div>
+
+        <!-- Botão LA ELE -->
+        <div class="la-ele-container">
+            <button class="la-ele-btn" onclick="promptPassword()">LA ELE</button>
+            <div id="la-ele-prompt" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeForm('la-ele-prompt')">&times;</span>
+                    <h2>LA ELE MAXIMO!!!!!</h2>
+                    <label for="la-ele-password">Senha:</label>
+                    <input type="password" id="la-ele-password" name="password" required>
+                    <button onclick="confirmDeletion()">Confirmar</button>
+                </div>
+            </div>
+            <div id="la-ele-confirm" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeForm('la-ele-confirm')">&times;</span>
+                    <h2>LA ELE MAXIMO!!!!!</h2>
+                    <button onclick="deleteAllData()">Excluir Tudo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToHome() {
+            window.location.href = "http://localhost:3000";
+        }
+
+        function showUpdateForm() {
+            document.getElementById('update-form').style.display = 'flex';
+            document.getElementById('delete-form').style.display = 'none';
+        }
+
+        function showDeleteForm() {
+            document.getElementById('delete-form').style.display = 'flex';
+            document.getElementById('update-form').style.display = 'none';
+        }
+
+        function closeForm(formId) {
+            document.getElementById(formId).style.display = 'none';
+        }
+
+        async function fetchPet() {
+            const id = document.getElementById('update-id').value;
+            try {
+                const response = await fetch(`/api/pets/${id}`);
+                if (!response.ok) {
+                    throw new Error('Pet não encontrado');
+                }
+                const pet = await response.json();
+                document.getElementById('update-cor').value = pet.cor;
+                document.getElementById('update-genero').value = pet.genero;
+                document.getElementById('update-animal').value = pet.animal;
+                document.getElementById('update-identification').value = pet.identification;
+                document.getElementById('update-nascimento').value = pet.nascimento.split('T')[0];
+                document.getElementById('update-breed').value = pet.breed;
+                document.getElementById('update-c_id').value = pet.c_id;
+                document.getElementById('update-descricao').value = pet.descricao; // Adiciona o campo de descrição
+                document.getElementById('updatePetFields').style.display = 'block';
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+
+        document.getElementById('updatePetForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const id = document.getElementById('update-id').value;
+            const cor = document.getElementById('update-cor').value;
+            const genero = document.getElementById('update-genero').value;
+            const animal = document.getElementById('update-animal').value;
+            const identification = document.getElementById('update-identification').value;
+            const nascimento = document.getElementById('update-nascimento').value;
+            const breed = document.getElementById('update-breed').value;
+            const c_id = document.getElementById('update-c_id').value;
+            const descricao = document.getElementById('update-descricao').value; // Obtém o valor da descrição
+            const clientId = parseInt(c_id);
+            if (isNaN(clientId)) {
+                alert('ID do Cliente inválido');
+                return;
+            }
+            const response = await fetch(`/api/pets/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ cor, genero, animal, identification, nascimento, breed, c_id: clientId, descricao }) // Inclui a descrição no corpo da requisição
+            });
+            if (response.ok) {
+                alert('Pet atualizado com sucesso!');
+            } else {
+                alert('Erro ao atualizar pet.');
+            }
+        });
+        document.getElementById('deletePetForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const id = document.getElementById('delete-id').value;
+            const response = await fetch(`/api/pets/${id}`, {
+                method: 'DELETE'
+            });
+            if (response.ok) {
+                alert('Pet deletado com sucesso!');
+                closeForm('delete-form');
+            } else {
+                alert('Erro ao deletar pet.');
+            }
+        });
+
+        // Função para exibir o prompt de senha
+        function promptPassword() {
+            document.getElementById('la-ele-prompt').style.display = 'block';
+        }
+
+        // Função para confirmar a exclusão
+        function confirmDeletion() {
+            const password = document.getElementById('la-ele-password').value;
+            if (password === 'Arnaldo') {
+                document.getElementById('la-ele-confirm').style.display = 'block';
+                document.getElementById('la-ele-prompt').style.display = 'none';
+            } else {
+                alert('Senha incorreta!');
+            }
+        }
+
+        // Função para deletar todos os dados
+        async function deleteAllData() {
+            try {
+                const response = await fetch('/api/delete-all', {
+                    method: 'DELETE'
+                });
+                if (response.ok) {
+                    alert('Todos os dados foram deletados com sucesso!');
+                    document.getElementById('la-ele-confirm').style.display = 'none';
+                } else {
+                    alert('Erro ao deletar todos os dados.');
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao deletar todos os dados.');
+            }
+        }
+
+        // Função para fechar o pop-up
+        function closeForm(formId) {
+            document.getElementById(formId).style.display = 'none';
+        }
+    </script>
+</body>
+</html>

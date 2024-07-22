@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pet Found Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="style.css" rel='stylesheet' type='text/css' media="all">
+    <link href="//fonts.googleapis.com/css?family=Barlow:300,400,500" rel="stylesheet">
+</head>
+<body>
+    <h1 class="header-w3ls">Pet Found Form</h1>
+    <div class="main-bothside">
+        <form id="petForm" action="/api/pets" method="post">
+            <div class="form-group">
+                <div class="form-mid-w3ls">
+                    <input type="text" name="nome" placeholder="Name" required>
+                </div>
+                <div class="form-mid-w3ls">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-mid-w3ls">
+                    <input type="text" name="telefone" placeholder="Phone" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-mid-w3ls">
+                    <input type="text" name="cidade" placeholder="City" required>
+                </div>
+                <div class="form-mid-w3ls">
+                    <input type="text" name="address" placeholder="Address" required>
+                </div>
+                <div class="form-mid-w3ls">
+                    <input type="text" name="estado" placeholder="State" required>
+                </div>
+            </div>
+            <div class="parent-clss">
+                <div class="personal-info">
+                    <p>Gender</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" value="Masculino" checked>
+                        <label class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" value="Feminino">
+                        <label class="form-check-label">Female</label>
+                    </div>
+                </div>
+                <div class="personal-info">
+                    <p>Animal</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="animal" value="Gato" checked>
+                        <label class="form-check-label">Cat</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="animal" value="Cachorro">
+                        <label class="form-check-label">Dog</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="animal" value="Outros">
+                        <label class="form-check-label">Others</label>
+                    </div>
+                </div>
+                <div class="personal-info">
+                    <p>Identificação</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="identification" value="Tattooed" checked>
+                        <label class="form-check-label">Tattooed</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="identification" value="Microchipped">
+                        <label class="form-check-label">Microchipped</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="identification" value="Outros">
+                        <label class="form-check-label">Others</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-mid-w3ls">
+                    <input type="date" name="nascimento" class="form-control" placeholder="Nascimento">
+                </div>
+                <div class="form-mid-w3ls">
+                    <input type="text" name="breed" placeholder="Breed/Type">
+                </div>
+                <div class="form-mid-w3ls">
+                    <input type="text" name="cor" placeholder="Pet Color & Markings">
+                </div>
+            </div>
+            <div class="form-control-w3l">
+                <textarea name="descricao" placeholder="Any Message"></textarea>
+            </div>
+            <div class="custom-file form-left-choose">
+                <input type="file" class="custom-file-input" id="customFile" name="file">
+            </div>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    <div class="copy">
+        <p>©2023 Pet Found Form. Todos os direitos reservados | Design por <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a></p>
+    </div>
+</body>
+</html>
